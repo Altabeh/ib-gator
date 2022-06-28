@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  tws:
+    build:
+       context: .
+       dockerfile: ./Dockerfile
+    volumes:
+      - ./config/ibgateway/IBController.ini:/root/IBController/IBController.ini
+      - ./config/ibgateway/jts.ini:/root/Jts/jts.ini
+    environment:
+      - TRADING_MODE=paper
+      - TWS_USERID=ali123
+      - TWS_PASSWORD=ali123
+      - XVFB_ARGS="-ac -screen 0 1024x768x16 +extension RANDR"
+    env_file:
+      - ./.env
+    restart: always
+    ports:
+      - "127.0.0.1::4002"
+#     networks:
+#       - ibgateway
+# networks:
+#   ibgateway:
+#     external: true
+
