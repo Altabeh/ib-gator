@@ -9,13 +9,13 @@ sudo docker compose build --no-cache=true
 You can start the container in the dev mode by running
 
 ```
-sudo cp ./.env.dev ./.env && sudo cp ./docker-compose-dev.yml ./docker-compose.yml
+sudo cp ./.env.dev ./.env && sudo cp ./docker-compose-dev.yml ./docker-compose.yml && sudo docker compose up
 
 ```
 
 Similarly, you can run the production container using
 
 ```
-sudo cp ./.env.prod ./.env && sudo cp ./docker-compose-prod.yml ./docker-compose.yml
+sudo cp ./.env.prod ./.env && sudo cp ./docker-compose-prod.yml ./docker-compose.yml && sudo docker compose up
 
 ```
