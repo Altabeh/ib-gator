@@ -1,13 +1,6 @@
 ARG IB_GATEWAY_VERSION=1015
 ARG IBC_VERSION=3.13.0
 
-#
-# Setup Stage: install apps
-#
-# This is a dedicated stage so that donwload archives don't end up on 
-# production image and consume unnecessary space.
-#
-
 FROM ubuntu:20.04 as setup
 
 ARG IB_GATEWAY_VERSION
